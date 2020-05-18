@@ -4,7 +4,9 @@ from array import *
 
 
 class DecimateTestCase(unittest.TestCase):
-    """This class tests
+    """This class tests the decimate
+    functionality and divided the efforts
+    in two main parts.
     1. Downample by two
     2. Decimate by two
     """
@@ -39,22 +41,36 @@ class DecimateTestCase(unittest.TestCase):
         """
         Test Kaiser approach
         """
-        print("kaiser")
         output_kaiser = downsample_by_2(input_convolve, kaiser_input)
         self.assertEqual.__self__.maxDiff = None
 
     def test_decimate_by_2(self):
-        print("kaiser2")
+        """
+        Test End to End dowsample and decimate (positive test case)
+        """
         output_downsample = downsample_by_2(input_convolve, kaiser_input)
         output_decimate = decimate_by_2(output_downsample, 2)
-        self.assertNotEqual(output_decimate.round(1).tolist(), expected_decimation)
+        self.assertEqual(output_decimate.round(8).tolist(), expected_decimation)
+
+    def test_decimate_by_2_fail(self):
+        """
+        Test that fails when Lenght of the input vector must be
+        greater
+        """
+        output_downsample = downsample_by_2(input_convolve, input_convolve2)
+        output_decimate = []
+        try:
+            output_decimate = decimate_by_2(output_downsample, 2)
+        except ValueError as error:
+            print(f"Found exception when trying to decimate: {error}")
+            pass
+
 
 
 # Test variables
 input_convolve = [1, 2, 3]
 input_convolve2 = [0, 1, 0.5]
 expected_convolve1 = [0.,  1.,  2.5, 4.,  1.5]
-
 
 input_conv_middle = [1,2,3]
 input_conv_middle2 = [0,1,0.5]
@@ -81,7 +97,6 @@ expected_decimation = [-0.0178963, 0.0279011, -0.0945022,
                     1.50712101, -0.24958513,  0.06456389,
                     0.01051083, -0.04265658,  0.04526048,
                     -0.04823651,  0.02875602]
-
 
 
 
