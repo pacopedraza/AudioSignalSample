@@ -5,6 +5,8 @@ of two. Changing the sample rate is one of the most common data permutations
 taken when working with audio data.
 
 # Needed tools
+This approach was developed on a linux environment (Ubuntu)
+CI is already configured (CircleCI)
 1. Python3
 ```sudo apt-get install python3.6```
 2. Pip3
