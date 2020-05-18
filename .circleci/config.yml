@@ -6,11 +6,13 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Install packages
+          name: Switch to python 3.7
           command: |
-            sudo apt-get update
             pyenv versions
             pyenv global 3.7.0
+      - run:
+          name: Install packages
+          command: |
             sudo apt-get install python3-pip
             pip3 install numpy
             pip3 install scipy
