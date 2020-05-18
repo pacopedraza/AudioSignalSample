@@ -43,6 +43,12 @@ class DecimateTestCase(unittest.TestCase):
         output_kaiser = downsample_by_2(input_convolve, kaiser_input)
         self.assertEqual.__self__.maxDiff = None
 
+    def test_decimate_by_2(self):
+        print("kaiser2")
+        output_downsample = downsample_by_2(input_convolve, kaiser_input)
+        output_decimate = decimate_by_2(output_downsample, 2)
+        self.assertNotEqual(output_decimate.round(1).tolist(), expected_decimation)
+
 
 # Test variables
 input_convolve = [1, 2, 3]
@@ -69,18 +75,13 @@ kaiser_input = [-0.01452123, -0.0155227 , 0.01667252,
         -0.01957209, 0.01800633, 0.01667252, -0.0155227,
         -0.01452123]
 
-expected_kaiser = [-0.01452123, -0.04456516, -0.05793657,
-                    0.00478327,  0.06645813, -0.00656129,
-                    -0.07789594,  0.00955665,  0.09402683,
-                    -0.01520896, -0.11836325,  0.02798186,
-                    0.15849724, -0.06859554, -0.22293547,
-                    0.48016871,  1.80063264,  2.40084352,
-                    1.56054829, 0.20578659, -0.34869394,
-                    -0.05196632,  0.1972721,   0.02350477,
-                    -0.13742384, -0.01337931,  0.10538863,
-                    0.0086333,  -0.08544615, -0.00603109,
-                    0.07184133,  0.00445093, -0.07561056,
-                    -0.04356369]
+expected_decimation = [-0.0178963, 0.0279011, -0.0945022,
+                    0.11822447, -0.12036858, 0.07817547,
+                    0.00512128, -0.13115076, 1.76920539,
+                    1.50712101, -0.24958513,  0.06456389,
+                    0.01051083, -0.04265658,  0.04526048,
+                    -0.04823651,  0.02875602]
+
 
 
 
