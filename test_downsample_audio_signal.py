@@ -1,7 +1,9 @@
+#!/usr/bin/env python3
+
 import unittest
 from downsample_audio_signal import *
 from array import *
-
+import HtmlTestRunner
 
 class DecimateTestCase(unittest.TestCase):
     """This class tests the decimate
@@ -101,4 +103,4 @@ expected_decimation = [-0.0178963, 0.0279011, -0.0945022,
 
 
 if __name__=='__main__':
-    unittest.main()
+    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output='test_reports'))

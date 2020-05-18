@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unittest Results</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-capitalize">Unittest Results</h2>
+                <p class='attribute'><strong>Start Time: </strong>2020-05-18 11:59:12</p>
+                <p class='attribute'><strong>Duration: </strong>245 ms</p>
+                <p class='attribute'><strong>Summary: </strong>Total: 6, Pass: 6</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>__main__.DecimateTestCase</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_decimate</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>Calculating downsample by 2
+Original values in list: [1, 2, 3]
+[0, 1, 0.5]
+output down sample: [0.  1.  2.5 4.  1.5]
+</p>
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_decimate_by_2</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>Calculating downsample by 2
+Original values in list: [1, 2, 3]
+[-0.01452123, -0.0155227, 0.01667252, 0.01800633, -0.01957209, -0.0214361, 0.02369253, 0.02647989, -0.03001054, -0.03462755, 0.04092347, 0.05001757, -0.06430831, -0.09003163, 0.15005272, 0.45015816, 0.45015816, 0.15005272, -0.09003163, -0.06430831, 0.05001757, 0.04092347, -0.03462755, -0.03001054, 0.02647989, 0.02369253, -0.0214361, -0.01957209, 0.01800633, 0.01667252, -0.0155227, -0.01452123]
+output down sample: [-0.01452123 -0.04456516 -0.05793657  0.00478327  0.06645813 -0.00656129
+ -0.07789594  0.00955665  0.09402683 -0.01520896 -0.11836325  0.02798186
+  0.15849724 -0.06859554 -0.22293547  0.48016871  1.80063264  2.40084352
+  1.56054829  0.20578659 -0.34869394 -0.05196632  0.1972721   0.02350477
+ -0.13742384 -0.01337931  0.10538863  0.0086333  -0.08544615 -0.00603109
+  0.07184133  0.00445093 -0.07561056 -0.04356369]
+Calculating decimate by 2
+Decimation is: [-0.0178963   0.0279011  -0.0945022   0.11822447 -0.12036858  0.07817547
+  0.00512128 -0.13115076  1.76920539  1.50712101 -0.24958513  0.06456389
+  0.01051083 -0.04265658  0.04526048 -0.04823651  0.02875602]
+</p>
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_decimate_by_2_fail</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>Calculating downsample by 2
+Original values in list: [1, 2, 3]
+[0, 1, 0.5]
+output down sample: [0.  1.  2.5 4.  1.5]
+Calculating decimate by 2
+Found exception when trying to decimate: The length of the input vector x must be greater than padlen, which is 27.
+</p>
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_decimate_middle</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>Calculating downsample by 2
+Original values in list: [1, 2, 3]
+[0, 1, 0.5]
+output when val [1.  2.5 4. ]
+</p>
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_decimate_same</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>Calculating downsample by 2
+Original values in list: [1, 2, 3]
+[0, 1, 0.5]
+output when val [2.5]
+</p>
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_filter_kaiser</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>Calculating downsample by 2
+Original values in list: [1, 2, 3]
+[-0.01452123, -0.0155227, 0.01667252, 0.01800633, -0.01957209, -0.0214361, 0.02369253, 0.02647989, -0.03001054, -0.03462755, 0.04092347, 0.05001757, -0.06430831, -0.09003163, 0.15005272, 0.45015816, 0.45015816, 0.15005272, -0.09003163, -0.06430831, 0.05001757, 0.04092347, -0.03462755, -0.03001054, 0.02647989, 0.02369253, -0.0214361, -0.01957209, 0.01800633, 0.01667252, -0.0155227, -0.01452123]
+output down sample: [-0.01452123 -0.04456516 -0.05793657  0.00478327  0.06645813 -0.00656129
+ -0.07789594  0.00955665  0.09402683 -0.01520896 -0.11836325  0.02798186
+  0.15849724 -0.06859554 -0.22293547  0.48016871  1.80063264  2.40084352
+  1.56054829  0.20578659 -0.34869394 -0.05196632  0.1972721   0.02350477
+ -0.13742384 -0.01337931  0.10538863  0.0086333  -0.08544615 -0.00603109
+  0.07184133  0.00445093 -0.07561056 -0.04356369]
+</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 6, Pass: 6 -- Duration: 245 ms
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('td').on('click', '.btn', function(e){
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                var $this = $(this);
+                var $nextRow = $this.closest('tr').next('tr');
+                $nextRow.slideToggle("fast");
+                $this.text(function(i, text){
+                    if (text === 'View') {
+                        return 'Hide';
+                    } else {
+                        return 'View';
+                    };
+                });
+            });
+        });
+    </script>
+</body>
+</html

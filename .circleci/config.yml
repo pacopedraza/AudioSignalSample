@@ -1,0 +1,19 @@
+version: 2.1
+jobs:
+  build:
+    docker: 
+      - image: circleci/node:4.8.2 # the primary container, where your job's commands are run
+    steps:
+      - checkout
+      - run:
+          name: Install packages
+          command: |
+            sudo apt-get install python3.6
+            sudo apt-get install python3-pip
+            pip3 install numpy
+            pip3 install scipy
+            pip3 install html-testRunner
+      - run:
+          name: Test
+          command: |
+            python3 test_downsample_audio_signal.py
